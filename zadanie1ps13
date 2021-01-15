@@ -1,0 +1,45 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+struct ksiazka {
+	string tytul;
+	string autor;
+	unsigned long long int ISBN;
+	int lbEgzemplarzy;
+};
+
+int main(){
+	int ROZMIAR = 5;
+	ksiazka ksiazki[ROZMIAR];
+	
+	ksiazki[0].tytul = "Maly Ksiaze";
+	ksiazki[0].autor = "Antoine de Saint-Exupéry";
+	ksiazki[0].ISBN = 9788310132161;
+	ksiazki[0].lbEgzemplarzy = 56;
+	
+	ksiazki[1].tytul = "Zanim umre";
+	ksiazki[1].autor = "Jenny Downham";
+	ksiazki[1].ISBN = 9788310130594;
+	ksiazki[1].lbEgzemplarzy = 560;
+	
+	ksiazki[2].tytul = "Ten obcy";
+	ksiazki[2].autor = "Irena Jurgielewiczowa";
+	ksiazki[2].ISBN = 9788310135070;
+	ksiazki[2].lbEgzemplarzy = 681;
+	
+	ksiazki[3].tytul = "Dziennik cwaniaczka";
+	ksiazki[3].autor = "Jeff Kinney";
+	ksiazki[3].ISBN = 9788310136589;
+	ksiazki[3].lbEgzemplarzy = 289;
+	
+	ksiazki[4].tytul = "Ksin sobowtór";
+	ksiazki[4].autor = "Konrad T. Lewandowski";
+	ksiazki[4].ISBN = 9788310126559;
+	ksiazki[4].lbEgzemplarzy = 142;
+	
+	cout << "Tytul\tAutor\tISBN\tLiczba Egzemplarzy\n";
+	for(int i = 0 ; i < 5 ; i++){
+		cout << ksiazki[i].tytul << "\t" << ksiazki[i].autor << "\t" << ksiazki[i].ISBN << "\t" << ksiazki[i].lbEgzemplarzy << "\n";
+	}
+}
